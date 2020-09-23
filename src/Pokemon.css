@@ -1,0 +1,15 @@
+.card {
+  align-items: center;
+  background-color: rgb(4, 71, 182);
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 5px rgb(18, 102, 238);
+  color: white;
+  display: flex;
+  height: 30vh;
+  justify-content: center;
+  width: 30vw;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgb(124, 252, 0);
+}

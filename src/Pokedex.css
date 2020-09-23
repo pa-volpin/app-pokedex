@@ -1,0 +1,24 @@
+.pokedex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+} 
+
+.pokedex-buttons-container {
+  margin: 2%;
+}
+
+.next-button button {
+  background-color: #73C92F;
+  border-color: #73C92F;
+  font-size: 25px;
+  height: 7vh;
+  width: 10vw;
+}
+
+.next-button button:disabled {
+  background-color: gray;
+  border-color: gray;
+}
