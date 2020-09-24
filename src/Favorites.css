@@ -1,6 +1,13 @@
 .favorites-container {
+  align-content: center;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+}
+
+.card {
+  margin: 1%;
+  min-width: 35vw;
 }

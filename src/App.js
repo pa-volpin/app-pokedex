@@ -12,9 +12,9 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
-    const storage = window.localStorage.favorites ? window.localStorage.favorites : [];
+    const storage = window.localStorage.favorites !== undefined ? window.localStorage.favorites : [];
     this.state = {
-      favorites: [],
+      favorites: storage.split(','),
     };
     this.handleFavorites = this.handleFavorites.bind(this);
   }
