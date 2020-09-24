@@ -38,11 +38,19 @@ class Pokedex extends React.Component {
 
   render() {
     const typeList = ['Fire', 'Psychic', 'Electric', 'Bug', 'Poison', 'Normal', 'Dragon', 'All'];
+    
+    const pokemonInScreen = this.state.pokemonsFiltered[this.state.pokemonIndex];
+    // Handle function received to favorite functionality
+    const { handle } = this.props;
+
+    // Verify if the pokemon is favorite to check or not the checkbox
+    const check = this.props.favorites.includes(pokemonInScreen.name);
+
     return (
       <div className='pokedex'>
-        <Pokemon pokemon={this.state.pokemonsFiltered[this.state.pokemonIndex]} link='true' />
+        <Pokemon pokemon={pokemonInScreen} link='true' isFavorite={check} handle={handle} />
         <div className='pokedex-buttons-container'>
-          { typeList.sort().map((type) => <Button disabled='false' handle={this.filterPokemon} pokemonType={type} label={type}/> )}
+          { typeList.sort().map((type, index) => <Button key={index} disabled='false' handle={this.filterPokemon} pokemonType={type} label={type}/> )}
         </div>
         <div className='next-button'>
           <Button handle={this.changePokemon} disabled={this.state.pokemonsFiltered.length === 1 ? true : false} label='Next'/>

@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 120px;
+  min-height: 120px;
   justify-content: center;
-  width: 120px;
+  min-width: 120px;
 }
