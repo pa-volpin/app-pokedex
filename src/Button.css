@@ -5,8 +5,9 @@ button {
   color: white;
   font-size: 20px;
   font-weight: 600;
-  height: 5vh;
-  margin: 2% 1%;
+  height: 6vh;
+  margin: 2% .5%;
+  min-width: 5vw;
 }
 
 button:hover {

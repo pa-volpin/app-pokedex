@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import Pokedex from './Pokedex.js';
 import PokemonDetails from './PokemonDetails.js';
 import Header from './Header.js';
-import Footer from './Footer.js';
 import About from './About.js';
 import NotFound from './NotFound.js';
 import Favorites from './Favorites.js';
@@ -51,7 +50,6 @@ class App extends React.Component {
             <Route exact path='/' render={() => <Pokedex favorites={this.state.favorites} handle={this.handleFavorites} />} />
             <Redirect to='/page-not-found' />
           </Switch>
-          <Footer />
         </BrowserRouter>
         </div>
     );

@@ -13,7 +13,7 @@ class Favorites extends React.Component {
     const favoritePokemons = favoritesPokemonsNames.map(pokemonName => pokemons.find(pokemon => pokemon.name === pokemonName));
     return (
         <div className="favorites-container">
-          {favoritePokemons.map((pokemonObj, index) => <Pokemon className="card" key={index} pokemon={pokemonObj} link={true} isFavorite={true} handle={handle} />)}
+          {(favoritePokemons.length < 1) ? <h1>No favorite pokemon yet.</h1> : favoritePokemons.map((pokemonObj, index) => <Pokemon className="card" key={index} pokemon={pokemonObj} link={true} isFavorite={true} handle={handle} />)}
         </div>
     );
   }
