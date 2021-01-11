@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect, HashRouter} from 'react-router-dom';
 import Pokedex from './Pokedex.js';
 import PokemonDetails from './PokemonDetails.js';
 import Header from './Header.js';
@@ -38,19 +38,36 @@ class App extends React.Component {
   }
 
   render() {
+    const toDeploy = false;
     return (
       <div className='app'>
-        <BrowserRouter>
-          <Header />
-          <Switch>
-            <Route path='/pokemons/:pokemonName'  render={(props) => <PokemonDetails {...props} favorites={this.state.favorites} handle={this.handleFavorites} />} />
-            <Route path='/about' component={About} />
-            <Route path='/page-not-found' component={NotFound} />
-            <Route path='/favorites' render={() => <Favorites favorites={this.state.favorites} handle={this.handleFavorites} />} />
-            <Route exact path='/' render={() => <Pokedex favorites={this.state.favorites} handle={this.handleFavorites} />} />
-            <Redirect to='/page-not-found' />
-          </Switch>
-        </BrowserRouter>
+        { toDeploy ?
+          (
+          <HashRouter>
+            <Header />
+            <Switch>
+              <Route path='/pokemons/:pokemonName'  render={(props) => <PokemonDetails {...props} favorites={this.state.favorites} handle={this.handleFavorites} />} />
+              <Route path='/about' component={About} />
+              <Route path='/not-found' component={NotFound} />
+              <Route path='/favorites' render={() => <Favorites favorites={this.state.favorites} handle={this.handleFavorites} />} />
+              <Route exact path='/' render={() => <Pokedex favorites={this.state.favorites} handle={this.handleFavorites} />} />
+              <Redirect to='/not-found' />
+            </Switch>
+          </HashRouter>
+          ) : 
+          (
+          <BrowserRouter>
+            <Header />
+            <Switch>
+              <Route path='/pokemons/:pokemonName'  render={(props) => <PokemonDetails {...props} favorites={this.state.favorites} handle={this.handleFavorites} />} />
+              <Route path='/about' component={About} />
+              <Route path='/not-found' component={NotFound} />
+              <Route path='/favorites' render={() => <Favorites favorites={this.state.favorites} handle={this.handleFavorites} />} />
+              <Route exact path='/' render={() => <Pokedex favorites={this.state.favorites} handle={this.handleFavorites} />} />
+              <Redirect to='/not-found' />
+            </Switch>
+          </BrowserRouter>
+          )}
         </div>
     );
   }
