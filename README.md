@@ -1,3 +1,49 @@
+# Bem vindo à [***Pokedex***](https://pa-volpin.github.io/app-pokedex/#/)
+
+A Pokedex, desenvolvida em React JS, é fruto de um projeto de desenvolvimento do modulo de front-end do curso da Trybe.
+
+O objetivo do projeto foi desenvolver uma aplicação web para dispor certos pokemons e suas informações na forma de uma galeria, a partir do consumo de uma API simulada e o uso da biblioteca React Router.
+
+Acesse o app Pokedex pelo link:
+
+https://pa-volpin.github.io/app-pokedex/#/
+
+## Principais elementos
+
+O projeto foi composto dos seguintes elementos:
+
+- Header
+- Cards
+- Galeria favoritos
+
+## Objetivo técnico
+
+Tecnicamente, objetivou-se a construção da aplicação web em React usando React Router.
+
+## Bibliotecas utilizadas
+
+- React
+- React Router Dom
+- GitHub Pages
+- Prop Types
+
+## Ferramentas de desenvolvimento
+
+- Git e GitHub para versionamento
+- VSCode como editor
+- GitHub Pages para deploy
+
+## Desenvolvedores
+
+- Paulo Afonso Volpin ([perfil](https://github.com/pa-volpin))
+
+## Repositório base do projeto (Trybe)
+
+https://github.com/tryber/exercise-pokedex-router
+
+<details>
+<summary>README OFICIAL DA TRYBE</summary></br>
+
 Esse é um projeto para o conteúdo de `React Router Dom`.
 
 ### Antes de iniciar
@@ -98,3 +144,4 @@ Crie uma visualização que mostre somente os pokémons favoritados e torne-a ac
 #### Exercício 10
 
 Salve os pokémons favoritados no local storage e recupere-os quando a aplicação for inicializada.
+</details>
